@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="jquery.min.js"></script>
+    <script src="handlebars.min-latest.js"></script>
+    <link rel="stylesheet" href="./material.min.css">
+    <script src="./material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="animate.css" rel="stylesheet" />
+
+    <style>
+        .view-card {
+            padding: 1em;
+            float: left;
+            margin: 1em;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--large-screen-only">
+
+        <header class="mdl-layout__header mdl-layout__header--waterfall">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Notes</span>
+            </div>
+        </header>
+
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Stream</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">Notebooks</a>
+                <a class="mdl-navigation__link" href="">Settings</a>
+            </nav>
+        </div>
+
+        <main class="mdl-layout__content" style="background-color: #F1F1F1;">
+
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div class="page-content" style="padding: 4em;" style="display: none;">
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+                <div class="page-content" style="padding: 4em;" style="display: none;">
+                    <!-- Flat button with ripple -->
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="goback">
+                        Back
+                    </button>
+
+                    <div class="view-card mdl-card mdl-shadow--2dp" style="float: none;">
+                        <div class="mdl-card__supporting-text">
+                            <form action="#">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="title" />
+                                    <label class="mdl-textfield__label" for="title">Title</label>
+                                </div>
+                                <br />
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <textarea class="mdl-textfield__input" rows="3" id="desc"></textarea>
+                                    <label class="mdl-textfield__label" for="sample5">Description</label>
+                                </div>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-button--raised mdl-js-ripple-effect" id="note-save-btn">
+                                    Save
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div style="position: fixed; right: 2em; bottom: 2em;">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-button--fab mdl-js-ripple-effect" id="note-new-btn">
+                    <i class="material-icons">add</i>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
